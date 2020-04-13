@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>daily_3</title>
+  <style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ /* .container {
+    font-size: 10px;
+    width: 25em;
+    height: 25em;
+    padding: 1.5em;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    border-radius: 1em;
+    overflow: hidden;
+  }
+
+  .container::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: repeating-linear-gradient(white 0%, white 0.75em,
+      hotpink 0.75em, hotpink 1.5em);
+    transform: translateX(-20%) translateY(-20%) rotate(-45deg);
+    animation: animate 30s linear infinite;
+    z-index: -1;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    top: 1.5em;
+    width: calc(100% - 3em);
+    height: calc(100% - 3em);
+    background-color: white;
+    box-shadow:
+      0 0 2px deeppink,
+      0 0 5px rgba(0, 0, 0, 1),
+      inset 0 0 5px rgba(0, 0, 0, 1);
+    border-radius: 1em;
+    z-index: -1;
+  }
+
+  .container p {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    color: hsla(328, 100%, 54%, 0.8);
+    font-size: 120px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-shadow: -3px 3px silver;
+    line-height: 2.4em;
+    transform: rotate(-45deg);
+    user-select: none;
+  }
+
+  @keyframes animate {
+    to {
+      background-position: 0 50em;
+    }
+  }*/
+  </style>
+
+  <style>
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 1px solid silver;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .box p {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin:auto;
+      font-size: 18px;
+      transform: rotate(-45deg);
+      z-index: 1;
+    }
+
+    .box::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 300px;
+      background:repeating-linear-gradient(
+        pink 0px,
+        pink 10px,
+        white 10px,
+        white 20px
+      );
+      /* 上面repeat-linear-gradient函数不旋转是因为为了利用background的repeat的属性，可以使得动画可以无缝流畅的运行 */
+      transform: rotate(45deg) translate(-70px, 10px);
+      z-index: -1;
+      background-position:0 0px;
+      animation: 3s move linear infinite;
+    }
+
+    @keyframes move {
+      to {
+        background-position:0 -300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="container">
+    <p>css</p>
+  </div> -->
+  <div class="box">
+    <p>123</p>
+  </div>
+</body>
+
+</html>
