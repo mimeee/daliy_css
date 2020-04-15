@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>daliy_5</title>
+	<style>
+		#container, .btn-container, .btn {
+			display: flex;
+			align-items: center;
+			border-radius: 70px;
+		}
+
+		#container {
+			position: relative;
+			margin: 200px;
+			padding: 20px;
+			width: 200px;
+			height: 70px;
+			background: linear-gradient(to bottom, #aaa, #ccc);
+			justify-content: center;
+		}
+
+		.btn-container {
+			background: linear-gradient(to bottom, darkgreen, green);
+			width: 100%;
+			height: 100%;
+			padding-left: 0;
+			justify-content: flex-start;
+			transition: 1s;
+			box-sizing: border-box;
+		}
+
+		.btn {
+			width: 75px;
+			height: 75px;
+			justify-content: center;
+			background: linear-gradient(to bottom, #ccc, #fff);
+		}
+
+		.btn::before {
+			content: 'OFF';
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			background: linear-gradient(to bottom, #bbb, #ccc);;
+			line-height: 50px;
+			text-align: center;
+			color: #999;
+			font-weight: bold;
+		}
+
+		#switch {
+			display: block;
+			width: 75px;
+			height: 75px;
+			position: absolute;
+			left: 20px;
+			border: none;
+			opacity: 0;
+			cursor: pointer;
+			z-index: 2;
+		}
+
+		#switch:checked {
+			right: 20px;
+			left: unset;
+		}
+
+ 		#switch:checked + .btn-container {
+			padding-left: 65%;
+		}
+
+		#switch:checked + .btn-container > .btn::before {
+			content: 'ON';
+			color: green;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<input type="checkbox" name="" id="switch">
+		<div class="btn-container">
+			<div class="btn"></div>
+		</div>
+	</div>
+</body>
+</html>
