@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>daily_6</title>
+  <style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bling {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 0;
+    background-color: #333;
+    animation: changeColor 5s linear infinite;
+  }
+
+  .d-1 {
+    animation-duration: 1s;
+  }
+
+  .d-2 {
+    animation-duration: 2s;
+  }
+
+  .d-3 {
+    animation-duration: 3s;
+  }
+
+  .d-4 {
+    animation-duration: 4s;
+  }
+
+  @keyframes changeColor {
+    from 0% {
+      background-color: #333;
+    }
+
+    50% {
+      background-color: #ccc;
+    }
+
+    100% {
+      background-color: #333;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="bling d-0"></div>
+    <div class="bling d-1"></div>
+    <div class="bling d-2"></div>
+    <div class="bling d-1"></div>
+    <div class="bling d-0"></div>
+    <div class="bling d-1"></div>
+    <div class="bling d-2"></div>
+    <div class="bling d-3"></div>
+    <div class="bling d-2"></div>
+    <div class="bling d-1"></div>
+    <div class="bling d-0"></div>
+    <div class="bling d-1"></div>
+    <div class="bling d-2"></div>
+    <div class="bling d-1"></div>
+    <div class="bling d-0"></div>
+    <div class="bling d-1"></div>
+    <div class="bling d-2"></div>
+    <div class="bling d-3"></div>
+    <div class="bling d-2"></div>
+    <div class="bling d-1"></div>
+  </div>
+</body>
+
+</html>
