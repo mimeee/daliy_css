@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>daliy_8</title>
+  <style>
+  .container {
+			width: 800px;
+			height: 500px;
+			background: #000;
+
+		}
+
+		.face {
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 100px;
+			line-height: 200px;
+			font-size: 50px;
+			overflow: hidden;
+		}
+
+		.face1 {
+			left: 200px;
+			transform: skewY(20deg);
+			background: #451232;
+		}
+
+		.face span{
+			width: 200px;
+			display: inline-block;
+			transform: translateX(-100%);
+			animation: move 3s linear infinite;
+			animation-fill-mode: backwards;
+		}
+
+		.face1 span {
+			/*transform: translateX(-200px);*/
+		}
+
+		.face2 {
+			left: 400px;
+			transform: skewY(-20deg);
+			background: #4a98a1;
+		}
+
+		.face2 span {
+			color: #fff;
+			/*transform: translateX(-600px);*/
+			animation-delay: 1.5s;
+		}
+
+		@keyframes move {
+			0% {
+				transform: translateX(-100%);
+			}
+
+			100% {
+				transform: translateX(100%);
+			}
+		}
+
+
+  /*body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: navajowhite;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container .face {
+    font-size: 10px;
+    width: 50%;
+    height: 200px;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .container .face.face1 {
+    background-color: indianred;
+    transform-origin: right;
+    transform: perspective(200px) rotateY(-15deg);
+  }
+
+  .container .face.face2 {
+    background-color: lightcoral;
+    transform-origin: left;
+    transform: perspective(200px) rotateY(15deg);
+  }
+
+  .container .face span {
+    font-size: 70px;
+    line-height: 3em;
+    position: absolute;
+    animation: marquee 5s linear infinite;
+    animation-fill-mode: backwards;
+  }
+
+  .container .face.face1 span {
+    color: darkred;
+    animation-delay: 2.5s;
+  }
+
+  .container .face.face2 span {
+    color: antiquewhite;
+  }
+
+  @keyframes marquee {
+    from {
+      left: 100%;
+    }
+
+    to {
+      left: -100%;
+    }
+  }*/
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="face face1">
+      <span>你好啊</span>
+    </div>
+    <div class="face face2">
+      <span>你好啊</span>
+    </div>
+  </div>
+</body>
+
+</html>

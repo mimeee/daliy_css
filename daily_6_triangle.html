@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <title>daily_6_triangle.html</title>
   <style>
-  html,
-  body {
+  /*body {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background-color: navy;*/
+    background-color: navy;
   }
 
   :root {
@@ -31,9 +30,9 @@
     border-width: 50px;
     border-style: solid;
     border-color: var(--color1) var(--color2) var(--color3) var(--color4);
-  }
+  }*/
 
-  .diamond span:first-child {
+  /*.diamond span:first-child {
     border-color: transparent var(--color2) var(--color3) transparent;
   }
 
@@ -58,6 +57,78 @@
 
     75% {
       border-color: var(--color2) var(--color3) var(--color4) var(--color1);
+    }
+  }*/
+
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(233,25,199, 0.5);
+  }
+
+  :root {
+    --color1: #FFCC99;
+    --color2: #FFFFCC;
+    --color3: #FFCC33;
+    --color4: #FF9999;
+  }
+
+  .diamond {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 150px 150px;
+    transform: rotate(45deg);
+  }
+
+  .diamond span {
+    border: 75px solid #000;
+    border-color: var(--color1) var(--color3) var(--color4) var(--color2);
+  }
+
+  .diamond span:first-child {
+    border-color: transparent var(--color4) var(--color2) transparent;
+    animation: biling-for-first 1s linear infinite;
+  }
+
+  .diamond span:not(:first-child) {
+    animation: biling 2s linear infinite;
+  }
+
+@keyframes biling-for-first { 
+    0%, 100% {
+      border-color: transparent var(--color3) var(--color4) transparent;
+    }
+
+    25% {
+      border-color: transparent var(--color4) var(--color1) transparent;
+    }
+
+    50% {
+      border-color: transparent var(--color1) var(--color2) transparent;
+    }
+
+    75% {
+      border-color: transparent var(--color2) var(--color3) transparent;
+    }
+  }  
+
+  @keyframes biling { 
+    0%, 100% {
+      border-color: var(--color1) var(--color3) var(--color4) var(--color2);
+    }
+
+    25% {
+      border-color: var(--color2) var(--color4) var(--color1) var(--color3);
+    }
+
+    50% {
+      border-color: var(--color3) var(--color1) var(--color2) var(--color4);
+    }
+
+    75% {
+      border-color: var(--color4) var(--color2) var(--color3) var(--color1);
     }
   }
   </style>
