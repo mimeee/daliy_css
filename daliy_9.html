@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>daliy_9</title>
+  <style>
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    position: relative;
+  }
+
+  .target {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 50px;
+    background: #ccc;
+    text-align: center;
+  }
+
+  .cover {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	margin: auto;
+  }
+  
+  .gum {
+  	z-index: 1;
+  	display: none;
+  }
+
+  .layer {
+  	z-index: 2;
+  }
+
+  .layer:hover + .gum{
+  	display: flex;
+  }
+
+  .gum::before {
+  	content: "";
+  	display: block;
+  	width: 20%;
+  	height: 20%;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	margin: auto;
+  	border-radius: 100%;
+  	border: 2px solid red;
+  }
+
+  .cover .line {
+    display: inline-block;
+    width: 199px;
+    height: 199px;
+  }
+
+  .cover .line.line-1 {
+    border-right: 2px solid red;
+    border-bottom: 1px solid red;
+  }
+
+  .cover .line.line-2 {
+    border-bottom: 1px solid red;
+  }
+
+  .cover .line.line-3 {
+  	border-top: 1px solid red;
+  }
+
+  .cover .line.line-4 {
+    border-top: 1px solid red;
+    border-left:  2px solid red;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="target">
+      <div>SHOOT</div>
+    </div>
+    <div class="cover layer"></div>
+    <div class="cover gum">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+        <span class="line line-4"></span>
+    </div>
+  </div>
+</body>
+
+</html>

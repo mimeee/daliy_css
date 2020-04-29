@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>daliy_9_gradient_fun</title>
+	<style>
+		body{
+			width: 100vh;
+			background: #000;
+		}
+		.simple-circle {
+			width: 200px;
+			height: 100px;
+			background-image: radial-gradient(
+				circle at center,
+				#fff, #fff 10px, transparent 1px, transparent 10px
+			);
+		}
+		.discount {
+			width: 200px;
+			height: 100px;
+			background-image: radial-gradient(
+				circle at left,
+				#000, #000 10px, transparent 1px, transparent 10px
+			);
+			background-repeat: repeat-y;
+			background-size: 20px 20px;
+			background-color: orange;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="simple-circle"></div>
+	<div class="discount"></div>
+
+</body>
+</html>
