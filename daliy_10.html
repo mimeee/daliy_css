@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>daliy_10</title>
+  <style>
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+
+  .container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border-width: 10px;
+    border-style: solid;
+    border-top-color: blue;
+    border-bottom-color: red;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate 4s ease-in-out infinite alternate;
+    /*background-image:
+				radial-gradient(circle at center, transparent 0px, transparent 50px, green 50px, green 60px, transparent 60px),
+				radial-gradient(circle at center, transparent 0px, transparent 70px, yellow 70px, yellow 80px, transparent 80px),
+				radial-gradient(circle at center, transparent 0px, transparent 90px, blue 90px, blue 100px, transparent 100px)
+			;
+			background-size: 100% 100%,  100% 100%,  100% 100%;*/
+  }
+
+  .container::before {
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 140px;
+
+    border-width: 10px;
+    border-style: solid;
+    border-top-color: #99a8ff;
+    border-bottom-color: #2aaa1f;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate 8s ease-in-out infinite alternate;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 80px;
+
+    border-width: 10px;
+    border-style: solid;
+    border-top-color: #ac7801;
+    border-bottom-color: #02aace;
+    border-left-color: transparent;
+    border-right-color: transparent;
+	animation: rotate 16s ease-in-out infinite alternate;
+  }
+
+  @keyframes rotate {
+  	0% {
+  		transform: rotate(0deg);
+  	}
+	100% {
+  		transform: rotate(1440deg);
+  	}  	
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  </div>
+</body>
+
+</html>

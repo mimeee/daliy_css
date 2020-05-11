@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>daily_9_after_study</title>
+  <style>
+  :root {
+    --bg: #000;
+    --w: 400px;
+    --h: 400px;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    padding: 200px;
+  }
+
+  .container {
+    position: relative;
+    width: var(--w);
+    height: var(--h);
+    color: #fff;
+    line-height: 400px;
+    text-align: center;
+    font-size: 30px;
+    filter: blur(2px);
+  }
+
+  .container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image:
+      radial-gradient(circle at center, transparent 30px, red 30px, red 31px, transparent 31px),
+      linear-gradient(0deg, red 0px, red 170px, transparent 170px, transparent 230px, red 230px),
+      linear-gradient(90deg, red 0px, red 170px, transparent 170px, transparent 230px, red 230px);
+    background-size: 100% 100%, 1px 100%, 100% 1px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, center, center;
+  }
+
+  .container:hover {
+    animation: blurBling 2s linear infinite;
+  }
+
+  .container:hover span:nth-child(1) {
+    display: none;
+  }
+
+  .container:hover span:nth-child(2) {
+    display: inline;
+  }
+
+  .container span:nth-child(2) {
+    display: none;
+  }
+
+  @keyframes blurBling {
+
+    0%,
+    100% {
+      filter: blur(2px);
+    }
+
+    50% {
+      filter: blur(0px);
+    }
+
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <span>Are you ready to shoot?</span>
+    <span>shoot!!!</span>
+  </div>
+</body>
+
+</html>

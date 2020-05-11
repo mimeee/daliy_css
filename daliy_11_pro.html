@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>daliy_11_pro</title>
+  <style>
+  :root {
+    --bgColor: #000;
+    --containerColor: rgba(20, 135, 23, 1);
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bgColor);
+  }
+
+  .container {
+    width: 160px;
+    height: 160px;
+	position: relative;
+    background-image:
+      radial-gradient(circle at center, var(--containerColor), var(--containerColor) 40px, transparent 40px, transparent 75px, var(--containerColor) 75px, var(--containerColor) 80px, transparent 80px);
+  }
+
+  .container::after {
+  	content: '';
+  	display: block;
+	width: 160px;
+	height: 160px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	background-image: radial-gradient(circle at center, transparent, transparent 78px,  var(--containerColor) 78px,  var(--containerColor) 80px, transparent 80px);
+	animation: spread 1.3s linear infinite;
+  }
+
+  .container::before {
+	content: '';
+  	display: block;
+	width: 160px;
+	height: 160px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	background-image: radial-gradient(circle at center, transparent, transparent 78px,  var(--containerColor) 78px,  var(--containerColor) 80px, transparent 80px);
+	animation: spread 1.3s linear infinite;  	
+  	animation-delay: 0.5s;
+  }
+
+  @keyframes spread{
+  	from {
+  		transform: scale(1);
+		opacity: 1;
+  	}
+  	to {
+  		transform: scale(1.5);
+  		opacity: 0.3;
+  	}
+  }
+  </style>
+</head>
+
+<body>
+	<div class="container"></div>
+</body>
+
+</html>
