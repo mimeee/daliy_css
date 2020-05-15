@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>daily_12</title>
+	<style>
+		body {
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.container {
+			position: relative;
+			width: 400px;
+			height: 200px;
+			background: #cb6546;
+			overflow: hidden;
+		}
+
+		.container::before, .container::after {
+			content: 'BREAK';
+			display: block;
+			position: absolute;
+			width: 400px;
+			height: 200px;
+			background: #cb6546;
+			line-height: 200px;
+			text-align: center;
+			color: #fff;
+			font-weight: bold;
+			font-size: 40px;
+		}
+
+		.container:hover::before{
+			transform: rotate(-15deg);
+			width: 200px;
+			transition: transfrom 1s ease, width 1s;
+		}
+
+		.container:hover::after{
+			transform: rotate(35deg);
+			width: 200px;
+			transition: transfrom 1s ease, width 1s;
+		}
+	</style>
+</head>
+<body>
+	<div class="container"></div>
+</body>
+</html>
